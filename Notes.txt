@@ -1,0 +1,27 @@
+Java Overview:
+- Used all over the world on billions of machines
+- Lots of job opportunities in Java
+- Similar to C# or C++
+- Uses classes
+
+
+Java Syntax
+
+- Text must be wrapped inside double quotations
+- Comments 
+    // Single line Comments
+    /* Multi-line
+       Comments */
+- Variables must be given a type upon declaration
+
+
+Variables
+
+ - String (text)
+ - int (whole numbers)
+ - float (decimals)
+ - char (single characters)
+ - boolean (true or false)
+
+ - Final Variables
+    - By using the final keyword (ex: final int myNumber = 5), you can make it so the number cannot be overwritten/changed.
