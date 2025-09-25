@@ -1,27 +1,142 @@
-Java Overview:
-- Used all over the world on billions of machines
-- Lots of job opportunities in Java
-- Similar to C# or C++
-- Uses classes
+Java Overview
+
+    - Used all over the world on billions of machines
+    - Lots of job opportunities in Java
+    - Similar to C# or C++
+    - Uses classes
 
 
 Java Syntax
 
-- Text must be wrapped inside double quotations
-- Comments 
-    // Single line Comments
-    /* Multi-line
-       Comments */
-- Variables must be given a type upon declaration
+    - Text must be wrapped inside double quotations
+    - Comments 
+        // Single line Comments
+        /* Multi-line
+           Comments */
+    - Variables must be given a type upon declaration
 
 
 Variables
 
- - String (text)
- - int (whole numbers)
- - float (decimals)
- - char (single characters)
- - boolean (true or false)
+    - String (text)
+    - int (whole numbers)
+    - float (decimals)
+    - char (single characters)
+    - boolean (true or false)
 
- - Final Variables
-    - By using the final keyword (ex: final int myNumber = 5), you can make it so the number cannot be overwritten/changed.
+    - Final Variables
+       - By using the final keyword (ex: final int myNumber = 5), you can make it so the number cannot be overwritten/changed.
+
+
+Conditionals (if else statements)
+
+    Syntax:
+
+        boolean isRaining = true;
+
+        if (isRaining) {
+            System.out.println("Bring an umbrella!");
+        }
+
+     - Can use if, else, else if, and switch blocks
+
+    Short Hand if..else statement
+
+    Syntax:
+
+        variable = (condition) ? expressionTrue : expressionFalse;
+
+Switch statements
+
+    Syntax:
+
+        switch(expression) {
+            case x:
+            // code block
+            break;
+
+            case y:
+            // code block
+            break;
+
+            default:
+            // code block
+        }
+
+    - The default statement runs if there is no match.
+    - The case can only be a value, not an expression
+        Ex: it couldn't be x % 2 == 0, but could be the int 1
+
+
+Loops
+
+    While Loops
+
+        Syntax:
+            while (condition) {
+                // code block to be executed
+            }
+
+        Example:
+            int i = 1;
+            while (i < 6) {
+                System.out.println(i);
+                i++; // make sure to change counter variable to avoid infinite loop
+            }
+
+    Do/While Loops
+
+        - The code will execute the code once before checking if the condition is true.
+
+        Syntax:
+            do {
+                // code block to be executed
+            }
+            while (condition);
+
+        Example:
+            int i = 0;
+            do {
+                System.out.println(i);
+                i++; // make sure to change counter variable to avoid infinite loop
+            }
+            while (i < 5);
+
+    For Loops
+        
+        Syntax:
+            for (statement 1; statement 2; statement 3) {
+                // code block to be executed
+            }
+
+            - Statement 1 is executed one time before the execution of the code block
+            - Statement 2 defines condition for executing code block
+            - Statement 3 is executed every time after the code block has been executed
+
+        Example:
+            for (int i = 0; i < 5; i++) {
+                System.out.println(i);
+            }
+    
+    For-Each Loops
+
+        - Used to loop through items in an array (or another data structure)
+
+        Syntax:
+            for (type variableName : arrayName) {
+                // code block to be executed
+            }
+
+        Example1:
+            String[] stores = {"Target", "Trader Joe's", "Costco", "Walmart"};
+
+            for (String car : cars) {
+                System.out.println(car);
+            }
+
+        Example2:
+            int[] numbers = {15, 30, 45, 60};
+
+            for (int num : numbers) {
+                System.out.println(num);
+            }
