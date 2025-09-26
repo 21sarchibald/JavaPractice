@@ -156,3 +156,43 @@ Arrays
     - Declaring and initializing array in one step (with array literal)
         Syntax:
             int[] numbers = {2, 5, 8, 11, 14};
+
+Methods
+
+    - Basically a function
+    - Syntax (to create a method in Main)
+
+        public class Main {
+            static void myMethod() {
+                // code to be executed
+            }
+        }
+
+        Explanation:
+            - myMethod() = name of the method
+            - static = the method belongs to the class and isn't an object of the class.
+            - void = this method doesn't have a return value.
+
+    - Calling a method -> just like calling a function
+    - Parameters (called arguments when it is passed into a method)
+
+Recursion
+
+
+Classes 
+    Syntax (to create a new class):
+        public class NewClass {
+            int x = 5;
+            String name = "daisy";
+        }
+
+    Syntax to create an object (an instance of a class)
+
+        public class Main {
+            public static void main(String[] args) {
+                Main newObject = new myClass(); // creates new instance of the class
+                System.out.println(newObject.name); // Access attributes in the class using the class.attributeName;
+            }
+        }
+
+    - An object is an instance of a class!!
