@@ -140,3 +140,19 @@ Loops
             for (int num : numbers) {
                 System.out.println(num);
             }
+
+Arrays
+
+    - Initializing array and populating items individually:
+        Syntax:
+            int[] numbers; // declaring array
+            numbers = new int[5] // allocates memory for 5 integers
+            ages[0] = 2;
+            ages[1] = 5;
+            ages[2] = 8;
+            ages[3] = 11;
+            ages[4] = 14;
+    
+    - Declaring and initializing array in one step (with array literal)
+        Syntax:
+            int[] numbers = {2, 5, 8, 11, 14};
