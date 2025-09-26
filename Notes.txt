@@ -196,3 +196,39 @@ Classes
         }
 
     - An object is an instance of a class!!
+
+
+Finance Tracker in Java Design
+
+Classes: 
+
+FitnessTracker
+
+    Methods: 
+        - showMenu()
+        - closeTracker()
+
+    Attributes:
+        - menu
+
+Transactions
+
+    Methods:
+        - new Transaction(date, description, amount)
+
+    Attributes:
+        - date
+        - description
+        - amount
+
+Account
+
+    Methods:
+        - showBalance(date)
+        - addTransaction()
+
+    Attributes:
+        balance
+        name
+        ArrayList<transaction> transactions
+
