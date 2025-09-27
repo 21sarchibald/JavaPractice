@@ -202,10 +202,10 @@ Finance Tracker in Java Design
 
 Classes: 
 
-FitnessTracker
+FinanceTracker
 
     Methods: 
-        - showMenu()
+        - displayMenu()
         - closeTracker()
 
     Attributes:
