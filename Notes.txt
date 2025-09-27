@@ -207,6 +207,7 @@ FinanceTracker
     Methods: 
         - displayMenu()
         - closeTracker()
+        - getUserInput(dataType) // like int, date, string, etc.
 
     Attributes:
         - menu
