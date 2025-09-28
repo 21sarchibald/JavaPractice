@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.time.LocalDate;
 
 public class FinanceTracker {
 
@@ -9,11 +10,16 @@ public class FinanceTracker {
 
         FinanceTracker tracker = new FinanceTracker();
         Scanner scanner = new Scanner(System.in);
+        int userInput = 1;
+
+        do {
 
         System.out.println("This is the finance tracker");
         tracker.displayMenu();
-        String userInput = scanner.nextLine();
+        userInput = Integer.parseInt(scanner.nextLine());
         System.out.println("User selected: " + userInput);
+        }
+        while (userInput != 4);
     }
 
     private void displayMenu() {
@@ -39,8 +45,9 @@ public class FinanceTracker {
     }
 
     // public float getDateUserInput() {
-    //     float userInput = scanner.nextFloat();
-    //     return userInput;
+    //     String userInput = scanner.nextLine();
+
+        // return userInput;
     // }
     
 }

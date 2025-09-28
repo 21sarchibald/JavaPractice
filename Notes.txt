@@ -225,7 +225,7 @@ Transactions
 Account
 
     Methods:
-        - showBalance(date)
+        - showBalance()
         - addTransaction()
 
     Attributes:

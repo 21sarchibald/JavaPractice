@@ -11,4 +11,8 @@ public class Transaction {
         this.amount = amount;
         this.description = description;
     }
+
+    public float getTransactionAmount(Transaction transaction) {
+        return transaction.amount;
+    }
 }
