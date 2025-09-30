@@ -2,19 +2,21 @@ import java.time.LocalDate;
 
 public class Transaction {
     private LocalDate date;
-    private String transactionType;
+    private int transactionType;
     private float amount;
     private String description;
 
 
-    public Transaction(LocalDate date, String transactionType, float amount, String description) {
+    public Transaction(LocalDate date, int transactionType, float amount, String description) {
         this.date = date;
         this.transactionType = transactionType;
         this.amount = amount;
         this.description = description;
     }
 
-    public float getTransactionAmount(Transaction transaction) {
-        return transaction.amount;
+    public float getTransactionValue(Transaction transaction) {
+        float transactionOperationValue = transaction.transactionType * transaction.amount;
+    
+        return transactionOperationValue;
     }
 }

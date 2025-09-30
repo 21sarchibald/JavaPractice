@@ -63,7 +63,17 @@ public class FinanceTracker {
                 LocalDate date = LocalDate.parse(scanner.nextLine());
 
                 System.out.print("Is the transaction a deposit or a withdrawal? (d/w): ");
-                String transactionType = scanner.nextLine();
+                
+                String transactionTypeInput = scanner.nextLine();
+                int transactionType = 0;
+
+                if (transactionTypeInput == "d") {
+                    transactionType = 1;
+                }
+
+                else if (transactionTypeInput == "w") {
+                    transactionType = -1;
+                }
                 
                 System.out.print("Transaction amount: $");
                 float amount = Float.parseFloat(scanner.nextLine());
