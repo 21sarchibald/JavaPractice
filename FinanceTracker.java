@@ -18,6 +18,7 @@ public class FinanceTracker {
         tracker.displayMenu();
         userInput = Integer.parseInt(scanner.nextLine());
         System.out.println("User selected: " + userInput);
+        runUserProgram(userInput);
         }
         while (userInput != 4);
     }
@@ -49,5 +50,21 @@ public class FinanceTracker {
 
         // return userInput;
     // }
+
+    private static void runUserProgram(int userInput) {
+        switch (userInput) {
+            case 1:
+                System.out.println("Option 1");
+                break;
+            case 2:
+                System.out.println("Option 2");
+                break;
+            case 3:
+                System.out.println("Option 3");
+            default:
+                System.out.println("Not a valid option.");
+        }
+
+    }
     
 }
