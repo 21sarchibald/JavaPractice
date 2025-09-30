@@ -17,7 +17,7 @@ public class FinanceTracker {
         System.out.println("This is the finance tracker");
         tracker.displayMenu();
         userInput = Integer.parseInt(scanner.nextLine());
-        System.out.println("User selected: " + userInput);
+        System.out.println("User selected: " + userInput); // Comment out later
         runUserProgram(userInput);
         }
         while (userInput != 4);
@@ -52,9 +52,30 @@ public class FinanceTracker {
     // }
 
     private static void runUserProgram(int userInput) {
+        Scanner scanner = new Scanner(System.in);
         switch (userInput) {
             case 1:
                 System.out.println("Option 1");
+                
+                // Get user input for new transaction.
+                System.out.print("Transaction date (yyyy-mm-dd): ");
+                LocalDate date = LocalDate.parse(scanner.nextLine());
+                
+                System.out.print("Transaction amount: $");
+                float amount = Float.parseFloat(scanner.nextLine());
+                
+
+                System.out.print("Transaction description: ");
+                String description = scanner.nextLine();
+                
+
+
+                Transaction newTransaction = new Transaction(date, amount, description);
+                
+                // Add transaction to list and add/subtract amount from balance
+
+                System.out.println(newTransaction);
+
                 break;
             case 2:
                 System.out.println("Option 2");
