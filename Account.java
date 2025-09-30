@@ -13,4 +13,8 @@ public class Account {
     //     float balance = getBalance();
     //     balance += transaction.getTransactionAmount();
     // }
+
+    public void addNewTransaction(Transaction transaction) {
+        transactions.add(transaction);
+    }
 }

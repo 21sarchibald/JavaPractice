@@ -5,6 +5,7 @@ public class FinanceTracker {
 
     String menu = "1. Add new transaction\n2. Get account balance\n3. View all past transactions\n4. Quit program";
     Scanner scanner = new Scanner(System.in);
+    private static Account account = new Account();
 
     public static void main(String[] args) {
 
@@ -60,20 +61,24 @@ public class FinanceTracker {
                 // Get user input for new transaction.
                 System.out.print("Transaction date (yyyy-mm-dd): ");
                 LocalDate date = LocalDate.parse(scanner.nextLine());
+
+                System.out.print("Is the transaction a deposit or a withdrawal? (d/w): ");
+                String transactionType = scanner.nextLine();
                 
                 System.out.print("Transaction amount: $");
                 float amount = Float.parseFloat(scanner.nextLine());
-                
 
                 System.out.print("Transaction description: ");
                 String description = scanner.nextLine();
                 
 
+                // Create new transaction instance with new data
+                Transaction newTransaction = new Transaction(date, transactionType, amount, description);
 
-                Transaction newTransaction = new Transaction(date, amount, description);
                 
                 // Add transaction to list and add/subtract amount from balance
-
+                
+                account.addNewTransaction(newTransaction);
                 System.out.println(newTransaction);
 
                 break;
