@@ -80,6 +80,7 @@ public class FinanceTracker {
 
                 
                 // Add transaction to list and add/subtract amount from balance
+                // Write transaction list to a file
                 
                 account.addNewTransaction(newTransaction);
                 System.out.println(newTransaction);
