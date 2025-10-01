@@ -63,27 +63,20 @@ public class FinanceTracker {
                 LocalDate date = LocalDate.parse(scanner.nextLine());
 
                 System.out.print("Is the transaction a deposit or a withdrawal? (d/w): ");
-                
                 String transactionTypeInput = scanner.nextLine();
-                int transactionType = 0;
 
-                if (transactionTypeInput == "d") {
-                    transactionType = 1;
-                }
-
-                else if (transactionTypeInput == "w") {
-                    transactionType = -1;
-                }
-                
                 System.out.print("Transaction amount: $");
-                float amount = Float.parseFloat(scanner.nextLine());
+                float amountInput = Float.parseFloat(scanner.nextLine());
+
+                float calculatedAmount = calculateTransactionValue(transactionTypeInput, amountInput);
 
                 System.out.print("Transaction description: ");
-                String description = scanner.nextLine();
+                String descriptionInput = scanner.nextLine();
                 
 
                 // Create new transaction instance with new data
-                Transaction newTransaction = new Transaction(date, transactionType, amount, description);
+                Transaction newTransaction = new Transaction(date, calculatedAmount, descriptionInput);
+
 
                 
                 // Add transaction to list and add/subtract amount from balance
@@ -103,6 +96,21 @@ public class FinanceTracker {
                 System.out.println("Not a valid option.");
         }
 
+        
+
+    }
+    public static float calculateTransactionValue(String transactionTypeInput, float amount) {
+        if (transactionTypeInput.equalsIgnoreCase("d")) {
+            return amount;
+        }
+
+        else if (transactionTypeInput.equalsIgnoreCase("w")) {
+            return -amount;
+        }
+
+        else {
+            return 0;
+        }
     }
     
 }
