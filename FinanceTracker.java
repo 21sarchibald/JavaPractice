@@ -76,8 +76,7 @@ public class FinanceTracker {
 
                 // Create new transaction instance with new data
                 Transaction newTransaction = new Transaction(date, calculatedAmount, descriptionInput);
-
-
+                
                 
                 // Add transaction to list and add/subtract amount from balance
                 // Write transaction list to a file
