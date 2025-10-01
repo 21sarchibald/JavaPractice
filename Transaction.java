@@ -19,4 +19,8 @@ public class Transaction {
     
         return transactionOperationValue;
     }
+
+    public String toString() {
+        return date.toString() + "," + transactionType + "," + amount + "," + description;
+    }
 }

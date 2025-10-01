@@ -90,6 +90,8 @@ public class FinanceTracker {
                 
                 account.addNewTransaction(newTransaction);
                 System.out.println(newTransaction);
+                System.out.println(account.transactions);
+                System.out.println(newTransaction.toString());
 
                 break;
             case 2:
