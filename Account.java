@@ -25,15 +25,15 @@ public class Account {
     public void calculateBalance() {
         balance = 0;
         transactions = getPreviousTransactions();
-        System.out.println(transactions);
+
+        // Get transaction amount from each transaction in transactions list.
         for (Transaction transaction : transactions) {
             balance += transaction.getAmount();
         }
+        
+        // Display account balance to user.
         System.out.println("Current account balance: $ " + balance);
     }
-
-    // For balance storage, I think we are going to just recalculate the balance
-    // from all transactions every time we load the program/add a new transaction
 
     public void addNewTransaction(Transaction transaction) {
         transactions.add(transaction);
@@ -44,6 +44,7 @@ public class Account {
     public void writeTransactionsToFile(String fileName) {
        try (FileWriter fileWriter = new FileWriter(fileName)) {
 
+        // Write transaction to file.
         for (Transaction transaction : this.transactions) {
             fileWriter.write(transaction.toString() + "\n");
         
@@ -57,15 +58,17 @@ public class Account {
     }
 
     public ArrayList<Transaction> getPreviousTransactions() {
-        // Read through file using Files.ReadAllLines
 
+        // Initiate list to store previous transaction strings
         ArrayList<Transaction> previousTransactions = new ArrayList<>();
+
         try {
         List<String> fileLines = Files.readAllLines(Paths.get("account.csv"));
         
         for (String line : fileLines) {
             String[] attributes = line.split(",");
 
+            // Create new instance of a transaction with attributes from the csv file.
             Transaction newTransaction = new Transaction(LocalDate.parse(attributes[0]), Float.parseFloat(attributes[1]), attributes[2]);
             
             previousTransactions.add(newTransaction);
@@ -74,9 +77,14 @@ public class Account {
         catch (IOException e) {
             System.out.println("Error loading file.");
         }
-
-        // System.out.print(transactions);
        
         return previousTransactions;
+    }
+
+    public void displayPreviousTransactions() {
+        transactions = getPreviousTransactions();
+        for (Transaction transaction : transactions) {
+            System.out.println(transaction);
+        }
     }
 }

@@ -90,6 +90,7 @@ public class FinanceTracker {
                 break;
             case 3:
                 System.out.println("Option 3");
+                account.displayPreviousTransactions();
             default:
                 System.out.println("Not a valid option.");
         }
