@@ -16,4 +16,8 @@ public class Transaction {
         return date.toString() + "," + amount + "," + description;
     }
 
+    public float getAmount() {
+        return amount;
+    }
+
 }

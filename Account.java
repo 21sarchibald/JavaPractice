@@ -1,6 +1,16 @@
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.io.IOException;
+import java.io.*; // imports everything from this library
+import java.nio.file.*; // imports everything from this library
+import java.util.*; // imports everything from this library
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+// Go through and clean out imports to make them simpler
+
+
 
 public class Account {
     float balance;
@@ -32,12 +42,22 @@ public class Account {
             fileWriter.write(transaction.toString() + "\n");
         
         }
-        System.out.println("File written");
         fileWriter.close();
         }
         catch (IOException e) {
             System.out.print("Could not add transactions to" + fileName);
         }
         
+    }
+
+    public ArrayList<Transaction> getPreviousTransactions() {
+        // Read through file using Files.ReadAllLines
+        // For each line, create a new instance
+        // Go through and split it on the comma
+        // Use each value to fill the attributes in the new instance
+       
+        
+        return transactions;
+        // fix function
     }
 }

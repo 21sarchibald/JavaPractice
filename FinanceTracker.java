@@ -79,9 +79,6 @@ public class FinanceTracker {
                 // Write transaction list to a file (rewrite at the end of every session)
                 
                 account.addNewTransaction(newTransaction);
-                System.out.println(newTransaction);
-                System.out.println(account.transactions);
-                System.out.println(newTransaction.toString());
 
                 break;
             case 2:
@@ -92,8 +89,6 @@ public class FinanceTracker {
             default:
                 System.out.println("Not a valid option.");
         }
-
-        
 
     }
     public static float calculateTransactionValue(String transactionTypeInput, float amount) {
