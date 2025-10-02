@@ -22,10 +22,15 @@ public class Account {
 
     }
 
-    // private void updateBalance(Transaction transaction) {
-    //     float balance = getBalance();
-    //     balance += transaction.getTransactionAmount();
-    // }
+    public void calculateBalance() {
+        balance = 0;
+        transactions = getPreviousTransactions();
+        System.out.println(transactions);
+        for (Transaction transaction : transactions) {
+            balance += transaction.getAmount();
+        }
+        System.out.println("Current account balance: $ " + balance);
+    }
 
     // For balance storage, I think we are going to just recalculate the balance
     // from all transactions every time we load the program/add a new transaction
@@ -53,6 +58,8 @@ public class Account {
 
     public ArrayList<Transaction> getPreviousTransactions() {
         // Read through file using Files.ReadAllLines
+
+        ArrayList<Transaction> previousTransactions = new ArrayList<>();
         try {
         List<String> fileLines = Files.readAllLines(Paths.get("account.csv"));
         
@@ -61,15 +68,15 @@ public class Account {
 
             Transaction newTransaction = new Transaction(LocalDate.parse(attributes[0]), Float.parseFloat(attributes[1]), attributes[2]);
             
-            transactions.add(newTransaction);
+            previousTransactions.add(newTransaction);
         }
     }
         catch (IOException e) {
             System.out.println("Error loading file.");
         }
 
-        System.out.print(transactions);
+        // System.out.print(transactions);
        
-        return transactions;
+        return previousTransactions;
     }
 }

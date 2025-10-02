@@ -16,7 +16,8 @@ public class FinanceTracker {
         Scanner scanner = new Scanner(System.in);
         int userInput = 1;
 
-        account.getPreviousTransactions();
+        // account.getPreviousTransactions();
+        // account.calculateBalance();
 
         do {
 
@@ -85,6 +86,7 @@ public class FinanceTracker {
                 break;
             case 2:
                 System.out.println("Option 2");
+                account.calculateBalance();
                 break;
             case 3:
                 System.out.println("Option 3");
