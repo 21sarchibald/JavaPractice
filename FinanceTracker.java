@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class FinanceTracker {
 
@@ -46,12 +49,6 @@ public class FinanceTracker {
         return userInput;
     }
 
-    // public float getDateUserInput() {
-    //     String userInput = scanner.nextLine();
-
-        // return userInput;
-    // }
-
     private static void runUserProgram(int userInput) {
         Scanner scanner = new Scanner(System.in);
         switch (userInput) {
@@ -76,10 +73,10 @@ public class FinanceTracker {
 
                 // Create new transaction instance with new data
                 Transaction newTransaction = new Transaction(date, calculatedAmount, descriptionInput);
-                
+
                 
                 // Add transaction to list and add/subtract amount from balance
-                // Write transaction list to a file
+                // Write transaction list to a file (rewrite at the end of every session)
                 
                 account.addNewTransaction(newTransaction);
                 System.out.println(newTransaction);
@@ -112,5 +109,6 @@ public class FinanceTracker {
             return 0;
         }
     }
+
     
 }
