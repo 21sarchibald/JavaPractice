@@ -16,6 +16,8 @@ public class FinanceTracker {
         Scanner scanner = new Scanner(System.in);
         int userInput = 1;
 
+        account.getPreviousTransactions();
+
         do {
 
         System.out.println("This is the finance tracker");

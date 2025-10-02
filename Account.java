@@ -7,6 +7,7 @@ import java.util.*; // imports everything from this library
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
+import java.time.LocalDate;
 
 // Go through and clean out imports to make them simpler
 
@@ -57,24 +58,18 @@ public class Account {
         
         for (String line : fileLines) {
             String[] attributes = line.split(",");
-            System.out.println(attributes[0]);
-            System.out.println(attributes[1]);
-            System.out.println(attributes[2]);
+
+            Transaction newTransaction = new Transaction(LocalDate.parse(attributes[0]), Float.parseFloat(attributes[1]), attributes[2]);
             
-            
-            // Transaction newTransaction = new Transaction()
+            transactions.add(newTransaction);
         }
     }
         catch (IOException e) {
             System.out.println("Error loading file.");
         }
 
-        // For each line, create a new instance
-        // Go through and split it on the comma
-        // Use each value to fill the attributes in the new instance
+        System.out.print(transactions);
        
-        
         return transactions;
-        // fix function
     }
 }
