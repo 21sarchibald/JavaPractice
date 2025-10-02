@@ -52,6 +52,23 @@ public class Account {
 
     public ArrayList<Transaction> getPreviousTransactions() {
         // Read through file using Files.ReadAllLines
+        try {
+        List<String> fileLines = Files.readAllLines(Paths.get("account.csv"));
+        
+        for (String line : fileLines) {
+            String[] attributes = line.split(",");
+            System.out.println(attributes[0]);
+            System.out.println(attributes[1]);
+            System.out.println(attributes[2]);
+            
+            
+            // Transaction newTransaction = new Transaction()
+        }
+    }
+        catch (IOException e) {
+            System.out.println("Error loading file.");
+        }
+
         // For each line, create a new instance
         // Go through and split it on the comma
         // Use each value to fill the attributes in the new instance
