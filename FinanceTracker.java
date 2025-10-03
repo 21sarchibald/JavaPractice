@@ -16,15 +16,15 @@ public class FinanceTracker {
         Scanner scanner = new Scanner(System.in);
         int userInput = 1;
 
-        // account.getPreviousTransactions();
-        // account.calculateBalance();
+        System.out.println();
+        System.out.println("Welcome to the Finance Tracker");
 
         do {
-
-        System.out.println("This is the finance tracker");
+        
+        System.out.println();
         tracker.displayMenu();
         userInput = Integer.parseInt(scanner.nextLine());
-        System.out.println("User selected: " + userInput); // Comment out later
+        System.out.println();
         runUserProgram(userInput);
         }
         while (userInput != 4);
@@ -32,7 +32,9 @@ public class FinanceTracker {
 
     private void displayMenu() {
         System.out.println("Menu:");
+        System.out.println();
         System.out.println(menu);
+        System.out.println();
         System.out.print("Please select one of the menu options from above: ");
         
     }
@@ -56,7 +58,6 @@ public class FinanceTracker {
         Scanner scanner = new Scanner(System.in);
         switch (userInput) {
             case 1:
-                System.out.println("Option 1");
                 
                 // Get user input for new transaction.
                 System.out.print("Transaction date (yyyy-mm-dd): ");
@@ -84,13 +85,16 @@ public class FinanceTracker {
                 account.addNewTransaction(newTransaction);
 
                 break;
+
             case 2:
-                System.out.println("Option 2");
                 account.calculateBalance();
                 break;
+
             case 3:
-                System.out.println("Option 3");
                 account.displayPreviousTransactions();
+
+                // Idk why it is printint out not a valid option when I select option 3.
+
             default:
                 System.out.println("Not a valid option.");
         }
