@@ -92,8 +92,7 @@ public class FinanceTracker {
 
             case 3:
                 account.displayPreviousTransactions();
-
-                // Idk why it is printint out not a valid option when I select option 3.
+                break;
 
             default:
                 System.out.println("Not a valid option.");
