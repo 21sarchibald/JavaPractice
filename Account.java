@@ -36,13 +36,15 @@ public class Account {
     }
 
     public void addNewTransaction(Transaction transaction) {
+        transactions = getPreviousTransactions();
         transactions.add(transaction);
         writeTransactionsToFile("account.csv");
         System.out.println("Transaction succesfully added.");
     }
 
     public void writeTransactionsToFile(String fileName) {
-       try (FileWriter fileWriter = new FileWriter(fileName)) {
+       
+        try (FileWriter fileWriter = new FileWriter(fileName)) {
 
         // Write transaction to file.
         for (Transaction transaction : this.transactions) {
