@@ -16,8 +16,16 @@ public class Transaction {
         return date.toString() + "," + amount + "," + description;
     }
 
+    public LocalDate getDate() {
+        return date;
+    }
+
     public float getAmount() {
         return amount;
+    }
+
+    public String getDescription() {
+        return description;
     }
 
 }

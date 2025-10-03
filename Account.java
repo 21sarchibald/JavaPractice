@@ -86,7 +86,11 @@ public class Account {
     public void displayPreviousTransactions() {
         transactions = getPreviousTransactions();
         for (Transaction transaction : transactions) {
-            System.out.println(transaction);
+
+            System.out.println("Date: " + transaction.getDate());
+            System.out.println("Amount: $ " + transaction.getAmount());
+            System.out.println("Description: " + transaction.getDescription());
+            System.out.println();
         }
     }
 }
