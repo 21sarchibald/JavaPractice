@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 // Go through and clean out imports to make them simpler
 
@@ -84,10 +85,11 @@ public class Account {
     }
 
     public void displayPreviousTransactions() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy");
         transactions = getPreviousTransactions();
         for (Transaction transaction : transactions) {
 
-            System.out.println("Date: " + transaction.getDate());
+            System.out.println("Date: " + transaction.getDate().format(formatter));
             System.out.println("Amount: $ " + transaction.getAmount());
             System.out.println("Description: " + transaction.getDescription());
             System.out.println();
