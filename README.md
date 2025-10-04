@@ -7,15 +7,19 @@ Finance tracker program that uses 3 classes: FinanceTracker, Account, and Transa
 
 Steps to build and/or run the software:
 
-1. First step here
-2.
-3.
+1. Open the repository in VS code
+2. Run the program in VS code (2 methods)
+    - Navigate to the FinanceTracker.java file. Click the run button in the top right
+      corner of VS code.
+    - Open a new terminal in VS code. Type the following: javac *.java  
+      Press enter, and then type the following: java FinanceTracker
 
 Instructions for using the software:
 
-1. First step here
-2.
-3.
+1. Run the software using the instructions in the previous section.
+2. After the menu appears, type the number that corresponds with your menu selection. Then press enter.
+3. If your menu selection requires input, type the required information and press enter to move on to the next prompt.
+4. To quit the program, press 4 and then press enter.
 
 ## Development Environment 
 

@@ -85,6 +85,8 @@ public class Account {
     }
 
     public void displayPreviousTransactions() {
+        System.out.println("Previous Transactions:");
+        System.out.println();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM d, yyyy");
         transactions = getPreviousTransactions();
         for (Transaction transaction : transactions) {
