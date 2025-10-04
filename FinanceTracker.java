@@ -23,7 +23,12 @@ public class FinanceTracker {
         
         System.out.println();
         tracker.displayMenu();
-        userInput = Integer.parseInt(scanner.nextLine());
+        if (scanner.hasNextInt()) {
+            userInput = scanner.nextInt();
+
+        } else {
+            System.out.println("Not a valid option. Please enter an integer (1-4).");
+        }
         System.out.println();
         runUserProgram(userInput);
         }
