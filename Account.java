@@ -1,18 +1,11 @@
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.io.IOException;
-import java.io.*; // imports everything from this library
-import java.nio.file.*; // imports everything from this library
-import java.util.*; // imports everything from this library
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-
-// Go through and clean out imports to make them simpler
-
-
 
 public class Account {
     float balance;
