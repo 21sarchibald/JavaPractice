@@ -30,7 +30,7 @@ public class FinanceTracker {
             System.out.println("Not a valid option. Please enter an integer (1-4).");
         }
         System.out.println();
-        runUserProgram(userInput);
+        tracker.runUserProgram(userInput);
         }
         while (userInput != 4);
     }
@@ -49,44 +49,36 @@ public class FinanceTracker {
         return userInput;
     }
 
-    public int getIntUserInput() {
-        int userInput = scanner.nextInt();
+    public LocalDate getDateUserInput() {
+        LocalDate userInput = LocalDate.parse(scanner.nextLine());
         return userInput;
     }
 
-    public float getFloatUserInput() {
-        float userInput = scanner.nextFloat();
-        return userInput;
-    }
-
-    private static void runUserProgram(int userInput) {
-        Scanner scanner = new Scanner(System.in);
+    private void runUserProgram(int userInput) {
+        
         switch (userInput) {
             case 1:
                 
                 // Get user input for new transaction.
                 System.out.print("Transaction date (yyyy-mm-dd): ");
-                LocalDate date = LocalDate.parse(scanner.nextLine());
+                LocalDate date = getDateUserInput();
 
                 System.out.print("Is the transaction a deposit or a withdrawal? (d/w): ");
-                String transactionTypeInput = scanner.nextLine();
+                String transactionTypeInput = getStringUserInput();
 
                 System.out.print("Transaction amount: $");
-                float amountInput = Float.parseFloat(scanner.nextLine());
+                Float amountInput = Float.parseFloat(scanner.nextLine());
 
                 float calculatedAmount = calculateTransactionValue(transactionTypeInput, amountInput);
 
                 System.out.print("Transaction description: ");
-                String descriptionInput = scanner.nextLine();
+                String descriptionInput = getStringUserInput();
                 
 
                 // Create new transaction instance with new data
                 Transaction newTransaction = new Transaction(date, calculatedAmount, descriptionInput);
-
                 
-                // Add transaction to list and add/subtract amount from balance
-                // Write transaction list to a file (rewrite at the end of every session)
-                
+                // Add new transaction to list of transactions using Account method
                 account.addNewTransaction(newTransaction);
 
                 break;
