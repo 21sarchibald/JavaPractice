@@ -88,6 +88,10 @@ public class FinanceTracker {
                 account.displayPreviousTransactions();
                 break;
 
+            case 4:
+                System.out.print("Exited program.");
+                break;
+                
             default:
                 System.out.println("Not a valid option.");
         }
