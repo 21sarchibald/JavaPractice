@@ -9,7 +9,6 @@ import java.time.format.DateTimeFormatter;
 
 public class Account {
     float balance;
-    String name;
     ArrayList<Transaction> transactions = new ArrayList<>();
 
     public void displayBalance() {
