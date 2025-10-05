@@ -37,12 +37,11 @@ I found these websites useful in developing this software:
 * [w3schools Java Tutorial](https://www.w3schools.com/java/default.asp)
 * [Oracle Java Downloads](https://www.oracle.com/java/technologies/downloads/?er=221886#jdk25-mac)
 * [ChatGPT Java Support](https://chatgpt.com/share/68e165cb-2f98-8000-87f7-9b565d1feb88)
-* [geeksforgeeks Java Try Catch Block](https://www.geeksforgeeks.org/java/java-try-catch-block/)
 
 ## Future Work
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] First thing here
-* [ ]
-* [ ]
+* [ ] I would like to add more error handling using try/except blocks so that user input is more validated.
+* [ ] I would also like to attach it to a GUI to get it out of the terminal and into a more user-friendly environment.
+* [ ] I think it would be cool to make it so that users can look up transactions by date, so I'd like to add a function to do that.

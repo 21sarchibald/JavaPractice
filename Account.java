@@ -30,7 +30,7 @@ public class Account {
         transactions.add(transaction);
         writeTransactionsToFile("account.csv");
         System.out.println();
-        System.out.println("Transaction succesfully added.");
+        System.out.println("Transaction successfully added.");
     }
 
     public void writeTransactionsToFile(String fileName) {
