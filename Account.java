@@ -40,6 +40,7 @@ public class Account {
         transactions = getPreviousTransactions();
         transactions.add(transaction);
         writeTransactionsToFile("account.csv");
+        System.out.println();
         System.out.println("Transaction succesfully added.");
     }
 
