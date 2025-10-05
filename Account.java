@@ -11,9 +11,6 @@ public class Account {
     float balance;
     ArrayList<Transaction> transactions = new ArrayList<>();
 
-    public void displayBalance() {
-
-    }
 
     public void calculateBalance() {
         balance = 0;

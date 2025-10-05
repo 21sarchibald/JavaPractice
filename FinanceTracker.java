@@ -1,8 +1,5 @@
 import java.util.Scanner;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.io.FileWriter;
-import java.io.IOException;
 
 public class FinanceTracker {
 
